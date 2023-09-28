@@ -1,4 +1,4 @@
-import { warmStrategyCache } from 'workbox-recipes';
+import { offlineFallback, warmStrategyCache } from 'workbox-recipes';
 import { CacheFirst, StaleWhileRevalidate } from 'workbox-strategies';
 import { registerRoute, Route } from 'workbox-routing';
 import { CacheableResponsePlugin } from 'workbox-cacheable-response';
@@ -37,6 +37,10 @@ registerRoute(
     ],
   }),
 );
+
+offlineFallback({
+  pageFallback: '/offline.html',
+});
 
 const imageRoute = new Route(({ request }) => {
   return request.destination === 'image';
