@@ -89,6 +89,7 @@ async function adicionarAnotacao() {
 
 function limparCampos() {
     document.getElementById("titulo").value = '';
+    document.getElementById("categoria").value = '';
     document.getElementById("descricao").value = '';
     document.getElementById("data").value = '';
 }
