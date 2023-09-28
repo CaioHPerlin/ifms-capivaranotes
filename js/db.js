@@ -37,13 +37,7 @@ async function buscarTodasAnotacoes(){
     const store = await tx.objectStore('anotacao');
     const anotacoes = await store.getAll();
     if(anotacoes){
-        const divLista = anotacoes.map(anotacao => {
-            return `<div class="item">
-                    <p>Anotação</p>
-                    <p>${anotacao.titulo} - ${anotacao.data} | ${anotacao.categoria} </p>
-                    <p>${anotacao.descricao}</p>
-                   </div>`;
-        });
+        const divLista = anotacoes.map(anotacao => novaDiv(anotacao.titulo, anotacao.categoria, anotacao.data, anotacao.descricao));
         listagem(divLista.join(' '));
     }
 }
@@ -57,16 +51,7 @@ async function buscarUmaAnotacao(){
     const tx = await db.transaction('anotacao', 'readonly');
     const store = await tx.objectStore('anotacao');
     const anotacao = await store.get(titulo);
-    if(anotacao){
-        const item = `
-        <div class="item">
-        <p>Anotação</p>
-        <p>${anotacao.titulo} - ${anotacao.data} | ${anotacao.categoria} </p>
-        <p>${anotacao.descricao}</p>
-       </div>
-        `
-        listagem(item);
-    }
+    if(anotacao) listagem(novaDiv(anotacao.titulo, anotacao.categoria, anotacao.data, anotacao.descricao));
 }
 
 async function adicionarAnotacao() {
@@ -96,4 +81,12 @@ function limparCampos() {
 
 function listagem(text){
     document.getElementById('resultados').innerHTML = text;
+}
+
+function novaDiv(titulo, categoria, data, descricao){
+    return `<div class="item">
+        <p>Anotação</p>
+        <p>${titulo} - ${data} | ${categoria} </p>
+        <p>${descricao}</p>
+   </div>`
 }
