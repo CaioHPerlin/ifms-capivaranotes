@@ -28,7 +28,29 @@
                 <textarea id="descricao" cols="30" rows="10" placeholder="Descrição"></textarea>
                 <input type="date" id="data">
                 <button id="btnCadastro" type="submit">Cadastrar</button>
+
+                <h1 class="title">Atualização</h1>
+                <div class="searchBar">
+                    <input type="text" id="tituloUpdate" placeholder="Título">
+                    <button id="btnPreenche"><i class="fa fa-search"></i></button>
+                </div>
+                <div id="updateForm">
+                    <input type="text" id="categoriaUpdate" placeholder="Categoria" autocomplete="off" required>
+                    <textarea id="descricaoUpdate" cols="30" rows="10" placeholder="Descrição"></textarea>
+                    <input type="date" id="dataUpdate">
+                    <div class="grid">
+                        <button id="btnCancelaAtualizacao">Cancelar</button>
+                        <button id="btnAtualiza" type="submit">Atualizar</button>
+                    </div>
+                </div>
+
+                <h1 class="title">Remoção</h1>
+                <div class="searchBar">
+                    <input type="text" id="tituloRemocao" placeholder="Título" autocomplete="off" required>
+                    <button id="btnRemocao" type="submit">X</button>
+                </div>
             </div>
+
             <div id="consulta">
                 <h1 class="title">Consulta</h1>
                 <div class="searchBar">

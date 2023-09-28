@@ -28,6 +28,11 @@ input:focus{
     border-bottom: 2px solid #b6805e;
 }
 
+input:read-only{
+    background-color: #cecece;
+    pointer-events: none;
+}
+
 .container {
     width: 60%;
     margin: auto;
@@ -54,15 +59,22 @@ textarea:hover{
     border-bottom: 2px solid black;
 }
 
-#btnBusca{
-    width: 50px;
+.searchBar{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 80% 20%;
+}
+
+.searchBar button{
+    margin: 0;
+    width: 80% !important;
+    justify-self: end;
     height: 30px;
-    margin-left: 20px;
     background-color: white;
     transition: all 0.3s ease;
 }
 
-#btnBusca:hover{
+.searchBar button:hover{
     transition: all 0.3s ease;
     background-color: rgb(230, 228, 228);
     
@@ -104,8 +116,6 @@ img {
     width: 100%;
 }
 
-.searchBar{
-    display: grid;
-    width: 100%;
-    grid-template-columns: 70% 30%;
+#updateForm{
+    display: none;
 }
