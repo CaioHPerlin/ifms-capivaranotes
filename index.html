@@ -21,26 +21,26 @@
 <body class="fullscreen">
     <div class="container">
         <div class="grid">
-            <div id="entrada">
+            <div id="entrada" class="entrada">
                 <h1 class="title">Cadastro</h1>
                 <input type="text" id="titulo" placeholder="Título" autocomplete="off" required>
                 <input type="text" id="categoria" placeholder="Categoria" autocomplete="off" required>
                 <textarea id="descricao" cols="30" rows="10" placeholder="Descrição"></textarea>
                 <input type="date" id="data">
-                <button id="btnCadastro" type="submit">Cadastrar</button>
+                <button id="btnCadastro" type="submit" class="submitBtn">Cadastrar</button>
 
                 <h1 class="title">Atualização</h1>
                 <div class="searchBar">
                     <input type="text" id="tituloUpdate" placeholder="Título">
-                    <button id="btnPreenche"><i class="fa fa-search"></i></button>
+                    <button id="btnPreenche" class="busca"><i class="fa fa-search"></i></button>
                 </div>
                 <div id="updateForm">
                     <input type="text" id="categoriaUpdate" placeholder="Categoria" autocomplete="off" required>
                     <textarea id="descricaoUpdate" cols="30" rows="10" placeholder="Descrição"></textarea>
                     <input type="date" id="dataUpdate">
-                    <div class="grid">
-                        <button id="btnCancelaAtualizacao">Cancelar</button>
-                        <button id="btnAtualiza" type="submit">Atualizar</button>
+                    <div class="gridBtn">
+                        <button id="btnCancelaAtualizacao" class="choiceBtn">Cancelar</button>
+                        <button id="btnAtualiza" type="submit" class="choiceBtn">Atualizar</button>
                     </div>
                 </div>
 
@@ -51,13 +51,13 @@
                 </div>
             </div>
 
-            <div id="consulta">
+            <div id="consulta" class="consulta">
                 <h1 class="title">Consulta</h1>
                 <div class="searchBar">
                     <input type="text" id="tituloBusca" placeholder="Título">
-                    <button id="btnBusca"><i class="fa fa-search"></i></button>
+                    <button id="btnBusca" class="busca"><i class="fa fa-search"></i></button>
                 </div>
-                <button id="btnCarregar">Carregar Todas as Anotações</button>
+                <button id="btnCarregar" class="submitBtn">Carregar Todas as Anotações</button>
                 
                 <div id="resultados"></div>
             </div>

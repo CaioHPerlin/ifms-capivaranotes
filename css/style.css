@@ -33,6 +33,14 @@ input:read-only{
     pointer-events: none;
 }
 
+input::-webkit-calendar-picker-indicator{
+    display: none;
+}
+
+input[type="date"]::-webkit-input-placeholder{ 
+    visibility: hidden !important;
+}
+
 .container {
     width: 60%;
     margin: auto;
@@ -50,6 +58,7 @@ input:read-only{
 }
 
 textarea{
+    width: 50%;
     border: 2px solid black;
     resize: none;
     outline: none;
@@ -72,24 +81,79 @@ textarea:hover{
     height: 30px;
     background-color: white;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .searchBar button:hover{
     transition: all 0.3s ease;
     background-color: rgb(230, 228, 228);
-    
+}
+
+.submitBtn{
+    font-family: 'Karla', sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    transition: 0.3s ease;
+    cursor: pointer;
+    background-color: white;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+}
+
+.submitBtn:hover{
+    transition: 0.3s ease;
+    background-color: rgb(230, 228, 228);
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+.choiceBtn{
+
+    font-family: 'Karla', sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    background-color: white;
+    border: none;
+    border-radius: 3px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.choiceBtn:hover{
+    transition: 0.3s ease;
+    background-color: rgb(230, 228, 228);
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+.entrada{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.consulta{
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .item {
-    width: 85%;
+    max-width: 80%;
+    min-width: none;
     background-color: #f0f0f0;
-    border: 20px solid #ccc;
-    margin: 5px; 
+    border-radius: 3px;
+    box-shadow: 10px 10px 15px -3px rgba(0,0,0,0.1);
+    margin: 20px; 
     display: flex;
     flex-direction: column;
     align-items: center; 
     justify-content: center; 
     text-align: center; 
+    transition : 500ms;
+    cursor: pointer;
+}
+
+.item:hover{
+    transition : 500ms;
+    transform : translateY(-13px);
 }
 
 img {
@@ -115,7 +179,16 @@ img {
     margin: 10px 0;
     width: 100%;
 }
+.gridBtn{
+    gap: 5px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
 
 #updateForm{
     display: none;
 }
+
+@media (max-width: 900px) {
+    .grid{grid-template-columns: 100%; }
+  }
