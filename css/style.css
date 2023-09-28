@@ -203,7 +203,7 @@ img {
 }
 
 .offline{
-    min-width: 500px;
+    width: 500px;
     min-height: 250px;
     text-align: center;
     box-shadow: 20px 25px 15px -3px rgba(0,0,0,0.1);
@@ -233,5 +233,10 @@ p{
     body{
         justify-content: center;
         justify-items: center;
+    }
+
+    .offline{
+        width: 90%;
+        margin: 0 auto  ;
     }
   }
