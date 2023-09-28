@@ -161,7 +161,7 @@ function listagem(text){
 function novaDiv(titulo, categoria, data, descricao){
     return `<div class="item">
         <p>Anotação</p>
-        <p>${titulo} - ${data} | ${categoria} </p>
+        <p>Título: ${titulo} Data: ${data} Categoria: ${categoria} </p>
         <p>${descricao}</p>
    </div>`
 }

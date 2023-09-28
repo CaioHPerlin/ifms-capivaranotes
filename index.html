@@ -35,13 +35,17 @@
                 <button id="btnCadastro" type="submit" class="submitBtn">Cadastrar</button>
 
                 <h1 class="title">Atualização</h1>
+                    <label for="tituloUpdate">Qual nota você deseja atualizar?</label>
                 <div class="searchBar">
                     <input type="text" id="tituloUpdate" placeholder="Título">
                     <button id="btnPreenche" class="busca" title="Buscar"><i class="fa fa-search"></i></button>
                 </div>
                 <div id="updateForm">
+                    <label for="categoriaUpdate">Qual será a nova categoria?</label>
                     <input type="text" id="categoriaUpdate" placeholder="Categoria" autocomplete="off" required>
+                    <label for="descricaoUpdate">Qual será a nova descrição?</label>
                     <textarea id="descricaoUpdate" cols="30" rows="10" placeholder="Descrição"></textarea>
+                    <label for="dataUpdate">E a data nova?</label>
                     <input type="date" id="dataUpdate">
                     <div class="gridBtn">
                         <button id="btnCancelaAtualizacao" class="choiceBtn">Cancelar</button>
@@ -50,6 +54,7 @@
                 </div>
 
                 <h1 class="title">Remoção</h1>
+                <label for="tituloRemocao">Qual nota você deseja remover?</label>
                 <div class="searchBar">
                     <input type="text" id="tituloRemocao" placeholder="Título" autocomplete="off" required>
                     <button id="btnRemocao" type="submit">X</button>
@@ -58,6 +63,7 @@
 
             <div id="consulta" class="consulta">
                 <h1 class="title">Consulta</h1>
+                <label for="tituloBusca">Qual nota você deseja buscar?</label>
                 <div class="searchBar">
                     <input type="text" id="tituloBusca" placeholder="Título">
                     <button id="btnBusca" class="busca" title="Buscar"><i class="fa fa-search"></i></button>

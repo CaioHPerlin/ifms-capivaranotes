@@ -214,8 +214,16 @@ img {
 }
 
 a{
-
+    text-decoration: none;
     color: black;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+p{
+    display: block;
 }
 
 @media (max-width: 900px) {
