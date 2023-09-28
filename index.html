@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta name="description" content="exemplo de fallback">
     <title>Minha primeira PWA</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="apple-touch-icon" href="images/pwa-icon-256.png" />
     <link rel="stylesheet" href="css/style.css" />
     <!--viewport para designers responsivos (mobo), content é a configuração-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="white" />
+    <meta name="theme-color" content="#e1e3e2" />
     <link rel="icon" href="favicon.ico">
     <link rel="manifest" href="./manifest.json">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -23,16 +24,20 @@
         <div class="grid">
             <div id="entrada" class="entrada">
                 <h1 class="title">Cadastro</h1>
+                <label for="titulo">Nos diga o título da sua nota!</label>
                 <input type="text" id="titulo" placeholder="Título" autocomplete="off" required>
+                <label for="categoria">Qual a categoria dela?</label>
                 <input type="text" id="categoria" placeholder="Categoria" autocomplete="off" required>
+                <label for="descricao">Descreva sua nota!</label>
                 <textarea id="descricao" cols="30" rows="10" placeholder="Descrição"></textarea>
+                <label for="data">Em qual data ela será publicada?</label>
                 <input type="date" id="data">
                 <button id="btnCadastro" type="submit" class="submitBtn">Cadastrar</button>
 
                 <h1 class="title">Atualização</h1>
                 <div class="searchBar">
                     <input type="text" id="tituloUpdate" placeholder="Título">
-                    <button id="btnPreenche" class="busca"><i class="fa fa-search"></i></button>
+                    <button id="btnPreenche" class="busca" title="Buscar"><i class="fa fa-search"></i></button>
                 </div>
                 <div id="updateForm">
                     <input type="text" id="categoriaUpdate" placeholder="Categoria" autocomplete="off" required>
@@ -55,7 +60,7 @@
                 <h1 class="title">Consulta</h1>
                 <div class="searchBar">
                     <input type="text" id="tituloBusca" placeholder="Título">
-                    <button id="btnBusca" class="busca"><i class="fa fa-search"></i></button>
+                    <button id="btnBusca" class="busca" title="Buscar"><i class="fa fa-search"></i></button>
                 </div>
                 <button id="btnCarregar" class="submitBtn">Carregar Todas as Anotações</button>
                 

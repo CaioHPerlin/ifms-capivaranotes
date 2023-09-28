@@ -41,6 +41,11 @@ input[type="date"]::-webkit-input-placeholder{
     visibility: hidden !important;
 }
 
+label{
+    align-self: flex-start;
+    padding-top: 5px;
+}
+
 .container {
     width: 60%;
     margin: auto;
@@ -126,12 +131,13 @@ textarea:hover{
 }
 
 .entrada{
-    max-width: 1000px;
+    max-width: 120%;
     margin: 0 auto;
 }
 
 .consulta{
-    max-width: 1000px;
+    max-width: 100%;
+
     margin: 0 auto;
 }
 
@@ -190,5 +196,9 @@ img {
 }
 
 @media (max-width: 900px) {
-    .grid{grid-template-columns: 100%; }
+    .grid{grid-template-columns: 100%;}
+    body{
+        justify-content: center;
+        justify-items: center;
+    }
   }
