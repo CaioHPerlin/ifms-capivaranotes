@@ -26,6 +26,7 @@ window.addEventListener('DOMContentLoaded', async event =>{
     criarDB();
     document.getElementById('btnCadastro').addEventListener('click', adicionarAnotacao);
     document.getElementById('btnCarregar').addEventListener('click', buscarTodasAnotacoes);
+    document.getElementById('btnBusca').addEventListener('click', buscarUmaAnotacao);
 });
 
 async function buscarTodasAnotacoes(){
@@ -44,6 +45,27 @@ async function buscarTodasAnotacoes(){
                    </div>`;
         });
         listagem(divLista.join(' '));
+    }
+}
+
+async function buscarUmaAnotacao(){
+    if(db == undefined){
+        console.log("O banco de dados está fechado.");
+    }
+    console.log('a')
+    const titulo = document.getElementById("tituloBusca").value;
+    const tx = await db.transaction('anotacao', 'readonly');
+    const store = await tx.objectStore('anotacao');
+    const anotacao = await store.get(titulo);
+    if(anotacao){
+        const item = `
+        <div class="item">
+        <p>Anotação</p>
+        <p>${anotacao.titulo} - ${anotacao.data} | ${anotacao.categoria} </p>
+        <p>${anotacao.descricao}</p>
+       </div>
+        `
+        listagem(item);
     }
 }
 
